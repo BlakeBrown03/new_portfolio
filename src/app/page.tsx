@@ -1,17 +1,16 @@
 import {
 	NavigationMenu,
 	NavigationMenuItem,
-	NavigationMenuList,
-	NavigationMenuTrigger
+	NavigationMenuList
 } from "@/components/ui/navigation-menu";
 
 export default function Home() {
 	return (
-		<div>
+		<div className="flex justify-end">
 			<NavigationMenu>
 				<NavigationMenuList>
 					<NavigationMenuItem>
-						<NavigationMenuTrigger>Home</NavigationMenuTrigger>
+						<a href="/">Home</a>
 					</NavigationMenuItem>
 				</NavigationMenuList>
 			</NavigationMenu>
