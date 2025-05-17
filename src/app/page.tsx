@@ -4,6 +4,7 @@ import NavBar from "@/components/ui/nav-bar";
 import AboutMe from "./about-me";
 import { ReactTyped } from "react-typed";
 import TechAndTools from "./tech-and-tools";
+import Image from "next/image";
 
 export default function Home() {
 	return (
@@ -11,10 +12,13 @@ export default function Home() {
 			<NavBar />
 			<div className="grid grid-cols-2 items-center justify-items-center my-32">
 				<div className="flex justify-center ml-10">
-					<img
+					<Image
 						src="/images/picture-of-me.jpg"
 						alt="Picture of Me"
-						className="w-128 h-128 rounded-full object-cover"
+						width={512}
+						height={512}
+						className="rounded-full object-cover"
+						priority
 					/>
 				</div>
 				<div className="flex justify-center">
