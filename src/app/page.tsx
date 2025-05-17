@@ -5,20 +5,10 @@ import AboutMe from "./about-me";
 import { ReactTyped } from "react-typed";
 import TechAndTools from "./tech-and-tools";
 import Image from "next/image";
-import Head from "next/head";
 
 export default function Home() {
 	return (
 		<>
-			<Head>
-				<title>Blake Brown</title>
-				<meta name="description" content="Blake Brown's Portfolio" />
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1"
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
 			<NavBar />
 			<div className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center my-32 gap-8">
 				<div className="flex justify-center">
