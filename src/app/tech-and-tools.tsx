@@ -44,7 +44,7 @@ const techAndTools = [
 ];
 
 export default function TechAndTools() {
-	const MotionCard = motion(Card);
+	const MotionCard = motion.create(Card);
 
 	return (
 		<div className="flex flex-col items-center justify-center my-4">
