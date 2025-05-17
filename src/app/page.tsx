@@ -11,14 +11,13 @@ export default function Home() {
 		<>
 			<NavBar />
 			<div className="grid grid-cols-2 items-center justify-items-center my-32">
-				<div className="flex justify-center ml-10">
+				<div className="flex justify-center">
 					<Image
 						src="/picture-of-me.jpg"
 						alt="Picture of Me"
-						width={512}
-						height={512}
-						className="rounded-full object-cover"
-						priority
+						width={600}
+						height={600}
+						className="rounded-full aspect-square object-cover"
 					/>
 				</div>
 				<div className="flex justify-center">
