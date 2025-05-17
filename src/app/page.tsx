@@ -13,7 +13,7 @@ export default function Home() {
 			<div className="grid grid-cols-2 items-center justify-items-center my-32">
 				<div className="flex justify-center ml-10">
 					<Image
-						src="/images/picture-of-me.jpg"
+						src="/picture-of-me.jpg"
 						alt="Picture of Me"
 						width={512}
 						height={512}
