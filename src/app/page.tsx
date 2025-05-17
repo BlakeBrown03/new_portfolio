@@ -3,6 +3,7 @@
 import NavBar from "@/components/ui/nav-bar";
 import AboutMe from "./about-me";
 import { ReactTyped } from "react-typed";
+import TechAndTools from "./tech-and-tools";
 
 export default function Home() {
 	return (
@@ -32,6 +33,7 @@ export default function Home() {
 				</div>
 			</div>
 			<AboutMe />
+			<TechAndTools />
 		</>
 	);
 }
