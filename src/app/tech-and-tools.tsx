@@ -40,6 +40,18 @@ const techAndTools = [
 	{
 		name: "Java",
 		icon: "/Java.svg"
+	},
+	{
+		name: "Git",
+		icon: "/Git.svg"
+	},
+	{
+		name: "Docker",
+		icon: "/Docker.svg"
+	},
+	{
+		name: "Bash",
+		icon: "/Bash.svg"
 	}
 ];
 
@@ -51,16 +63,20 @@ export default function TechAndTools() {
 			<h1 className="text-4xl font-bold my-4">Technologies and Tools</h1>
 			<div className="relative w-full overflow-hidden">
 				<motion.div
-					className="flex flex-row items-center justify-center gap-4"
+					className="flex flex-row items-center justify-center"
+					style={{
+						width: "fit-content",
+						gap: "1rem"
+					}}
 					animate={{
-						x: [0, 1000]
+						x: ["0%", "-50%"]
 					}}
 					transition={{
-						duration: 20,
+						duration: 50,
 						repeat: Infinity,
-						ease: "linear"
+						ease: "linear",
+						repeatType: "loop"
 					}}>
-					{/* First set of cards */}
 					{techAndTools.map(tech => (
 						<MotionCard
 							key={tech.name}
@@ -82,7 +98,6 @@ export default function TechAndTools() {
 							</CardContent>
 						</MotionCard>
 					))}
-					{/* Duplicate set of cards for seamless loop */}
 					{techAndTools.map(tech => (
 						<MotionCard
 							key={`${tech.name}-duplicate`}
