@@ -5,7 +5,7 @@ import AboutMe from "./about-me";
 import { ReactTyped } from "react-typed";
 import TechAndTools from "./tech-and-tools";
 import Image from "next/image";
-
+import Projects from "./projects";
 export default function Home() {
 	return (
 		<>
@@ -37,6 +37,7 @@ export default function Home() {
 			</div>
 			<AboutMe />
 			<TechAndTools />
+			<Projects />
 		</>
 	);
 }
