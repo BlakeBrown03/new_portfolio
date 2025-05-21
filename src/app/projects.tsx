@@ -37,23 +37,40 @@ export default function Projects() {
 	return (
 		<div className="flex flex-col items-center justify-center my-4">
 			<h1 className="text-4xl font-bold my-4">Projects</h1>
-			<Carousel>
-				<CarouselContent>
-					{projects.map(project => (
-						<CarouselItem key={project.id}>
-							<Image
-								src={project.image}
-								alt={project.name}
-								width={300}
-								height={300}
-								className="rounded-lg"
-							/>
-						</CarouselItem>
-					))}
-				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
-			</Carousel>
+			<div className="px-24 w-full">
+				<Carousel>
+					<CarouselContent>
+						{projects.map(project => (
+							<CarouselItem
+								key={project.id}
+								className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
+								<div className="flex flex-col items-center justify-center">
+									<h1 className="text-2xl font-bold">
+										{project.name}
+									</h1>
+									<p className="text-sm text-gray-500">
+										{project.description}
+									</p>
+									<Link
+										href={project.link}
+										className="text-blue-500">
+										View Project
+									</Link>
+								</div>
+								<Image
+									src={project.image}
+									alt={project.name}
+									width={400}
+									height={400}
+									className="rounded-lg"
+								/>
+							</CarouselItem>
+						))}
+					</CarouselContent>
+					<CarouselPrevious />
+					<CarouselNext />
+				</Carousel>
+			</div>
 		</div>
 	);
 }
