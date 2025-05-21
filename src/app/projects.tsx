@@ -38,13 +38,13 @@ export default function Projects() {
 		<div className="flex flex-col items-center justify-center my-4">
 			<h1 className="text-4xl font-bold my-4">Projects</h1>
 			<div className="px-24 w-full">
-				<Carousel>
+				<Carousel opts={{ loop: true }}>
 					<CarouselContent>
 						{projects.map(project => (
 							<CarouselItem
 								key={project.id}
-								className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
-								<div className="flex flex-col items-center justify-center">
+								className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center basis-full">
+								<div className="flex flex-col items-center">
 									<h1 className="text-2xl font-bold">
 										{project.name}
 									</h1>
