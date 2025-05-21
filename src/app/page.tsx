@@ -6,6 +6,7 @@ import { ReactTyped } from "react-typed";
 import TechAndTools from "./tech-and-tools";
 import Image from "next/image";
 import Projects from "./projects";
+import Contact from "./contact";
 export default function Home() {
 	return (
 		<>
@@ -38,6 +39,7 @@ export default function Home() {
 			<AboutMe />
 			<TechAndTools />
 			<Projects />
+			<Contact />
 		</>
 	);
 }
