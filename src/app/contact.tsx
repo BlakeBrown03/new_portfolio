@@ -1,72 +1,62 @@
 import Image from "next/image";
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
-	const [isSubmitting, setIsSubmitting] = useState(false);
-
-	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		setIsSubmitting(true);
-		const formData = new FormData(e.target as HTMLFormElement);
-		console.log(formData);
-		setIsSubmitting(false);
-	};
 	return (
-		<>
-			<h1 className="text-center text-4xl font-bold my-4">Contact Me</h1>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center my-4">
-				<div className="flex flex-col items-center justify-center w-full">
-					<form
-						onSubmit={handleSubmit}
-						className="flex flex-col gap-4 w-full max-w-md">
-						<label htmlFor="name" className="sr-only">
-							Name
-						</label>
-						<input
-							id="name"
-							type="text"
-							name="name"
-							placeholder="Name"
-							required
-							className="p-2 border rounded-md"
-						/>
-						<label htmlFor="email" className="sr-only">
-							Email
-						</label>
-						<input
-							id="email"
-							type="email"
-							name="email"
-							placeholder="Email"
-							required
-							className="p-2 border rounded-md"
-						/>
-						<label htmlFor="message" className="sr-only">
-							Message
-						</label>
-						<textarea
-							id="message"
-							name="message"
-							placeholder="Message"
-							required
-							className="p-2 border rounded-md min-h-[150px]"></textarea>
-						<button
-							type="submit"
-							disabled={isSubmitting}
-							className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition-colors">
-							{isSubmitting ? "Sending..." : "Send"}
-						</button>
-					</form>
-				</div>
-				<div className="flex flex-col items-center justify-center w-full max-w-md">
+		<div className="flex flex-col items-center justify-center gap-8 py-12">
+			<h1 className="text-4xl font-bold text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+				Let's Connect
+			</h1>
+			<div className="flex flex-row gap-8">
+				<motion.a
+					href="https://www.linkedin.com/in/blakebrown-0/"
+					target="_blank"
+					rel="noopener noreferrer"
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.95 }}
+					className="group relative">
+					<div className="absolute inset-0 bg-primary/10 rounded-full blur-lg group-hover:bg-primary/20 transition-all duration-300" />
 					<Image
-						src="/images/contact.png"
-						alt="Contact"
-						width={500}
-						height={500}
+						src="/LinkedIn.svg"
+						alt="LinkedIn"
+						width={80}
+						height={80}
+						className="relative transition-transform duration-300 group-hover:brightness-110"
 					/>
-				</div>
+				</motion.a>
+				<motion.a
+					href="https://github.com/blakebrown-03"
+					target="_blank"
+					rel="noopener noreferrer"
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.95 }}
+					className="group relative">
+					<div className="absolute inset-0 bg-primary/10 rounded-full blur-lg group-hover:bg-primary/20 transition-all duration-300" />
+					<Image
+						src="/GitHub.svg"
+						alt="GitHub"
+						width={80}
+						height={80}
+						className="relative transition-transform duration-300 group-hover:brightness-110"
+					/>
+				</motion.a>
+				<motion.a
+					href="https://www.x.com/blakebrown_/"
+					target="_blank"
+					rel="noopener noreferrer"
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.95 }}
+					className="group relative">
+					<div className="absolute inset-0 bg-primary/10 rounded-full blur-lg group-hover:bg-primary/20 transition-all duration-300" />
+					<Image
+						src="/X.svg"
+						alt="X (Twitter)"
+						width={80}
+						height={80}
+						className="relative transition-transform duration-300 group-hover:brightness-110"
+					/>
+				</motion.a>
 			</div>
-		</>
+		</div>
 	);
 }
