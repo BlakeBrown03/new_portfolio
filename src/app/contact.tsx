@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
     return (
-        <div className="flex flex-col items-center justify-center gap-8 py-12">
+        <div
+            className="flex flex-col items-center justify-center gap-8 py-12"
+            id="contact">
             <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Let's Connect
             </h1>
