@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 export default function Contact() {
+    const { theme } = useTheme();
+
     return (
         <div
             className="flex flex-col items-center justify-center gap-8 py-12"
@@ -17,7 +20,7 @@ export default function Contact() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="group relative">
-                    <div className="absolute inset-0 bg-primary/10 rounded-full blur-lg group-hover:bg-primary/20 transition-all duration-300" />
+                    <div className="absolute inset-0 transition-all duration-300" />
                     <Image
                         src="/LinkedIn.svg"
                         alt="LinkedIn"
@@ -33,7 +36,7 @@ export default function Contact() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="group relative">
-                    <div className="absolute inset-0 bg-primary/10 rounded-full blur-lg group-hover:bg-primary/20 transition-all duration-300" />
+                    <div className="absolute inset-0 transition-all duration-300" />
                     <Image
                         src="/GitHub.svg"
                         alt="GitHub"
@@ -49,9 +52,9 @@ export default function Contact() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="group relative">
-                    <div className="absolute inset-0 bg-primary/10 rounded-full blur-lg group-hover:bg-primary/20 transition-all duration-300" />
+                    <div className="absolute inset-0 transition-all duration-300" />
                     <Image
-                        src="/X.svg"
+                        src={theme === "dark" ? "/x_light.svg" : "/x_dark.svg"}
                         alt="X (Twitter)"
                         width={80}
                         height={80}
