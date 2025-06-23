@@ -6,7 +6,7 @@ export default function Contact() {
         <div
             className="flex flex-col items-center justify-center gap-8 py-12"
             id="contact">
-            <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold text-center">
                 Let's Connect
             </h1>
             <div className="flex flex-row gap-8">
