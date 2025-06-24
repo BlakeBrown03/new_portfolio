@@ -9,9 +9,7 @@ export default function Contact() {
         <div
             className="flex flex-col items-center justify-center gap-8 py-12"
             id="contact">
-            <h1 className="text-4xl font-bold text-center">
-                Let's Connect
-            </h1>
+            <h1 className="text-4xl font-bold text-center">Let's Connect</h1>
             <div className="flex flex-row gap-8">
                 <motion.a
                     href="https://www.linkedin.com/in/blake-brown03/"
@@ -42,7 +40,7 @@ export default function Contact() {
                         alt="GitHub"
                         width={80}
                         height={80}
-                        className="relative transition-transform duration-300 group-hover:brightness-110"
+                        className="relative transition-transform duration-300 group-hover:brightness-110 rounded-full"
                     />
                 </motion.a>
                 <motion.a
@@ -54,7 +52,7 @@ export default function Contact() {
                     className="group relative">
                     <div className="absolute inset-0 transition-all duration-300" />
                     <Image
-                        src={theme === "dark" ? "/x_light.svg" : "/x_dark.svg"}
+                        src={theme === "dark" ? "/x_dark.svg" : "/x_light.svg"}
                         alt="X (Twitter)"
                         width={80}
                         height={80}
