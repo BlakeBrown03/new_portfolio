@@ -52,7 +52,7 @@ export default function Contact() {
                     className="group relative">
                     <div className="absolute inset-0 transition-all duration-300" />
                     <Image
-                        src={theme === "dark" ? "/x_dark.svg" : "/x_light.svg"}
+                        src={theme === "dark" ? "/x_light.svg" : "/x_dark.svg"}
                         alt="X (Twitter)"
                         width={80}
                         height={80}
